@@ -1,3 +1,4 @@
+cd ~
 git clone https://github.com/Chia-Network/chia-blockchain -b 1.6.1 chia-blockchain1
 for num in {2..32}
 do
