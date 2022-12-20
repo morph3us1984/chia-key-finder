@@ -26,8 +26,6 @@ echo "$random"
 result=$(chia keys generate -l $random | grep "fingerprint" | cut -d " " -f 8)
 echo "$result"
 echo "$i Keys found with special patterns"
-### Here you can define the substring that this tool should look for. I included some examples
-### Dont forget to set a case underneath
 SUB0='1984'
 SUB1='111111'
 SUB2='222222'
@@ -39,15 +37,17 @@ SUB7='777777'
 SUB8='888888'
 SUB9='999999'
 SUBZERO='000000'
+SUB1976='1976'
+SUBGEB='18031984'
 SUBMORPH='morph'
+#result="123400004321"
 address=$(chia keys show | grep "$result" -A 4 | grep "First" | cut -d " " -f 4)
 echo -e "\n\n\t\tAddress is $address\n\n"
 case $result in
-###This is a block for case. You can add your examples by copying this one and changing the *"$SUBwhateveryounamedit"*
+
   *"$SUB0"*)
     echo -n -e "FOUND: Fingerprint with special pattern: $result \n" ; i++ ; savekey
     ;;
-### END of the block to copy
   *"$SUB1"*)
     echo -n -e "FOUND: Fingerprint with special pattern: $result \n" ; i++ ; savekey
     ;;
