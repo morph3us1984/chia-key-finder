@@ -43,5 +43,7 @@ dont forget to change the other for loops the same way. If you have 8 Threads fo
 If you have 128 threads for example, change the second for "{10..32}" to "{10..128}"
 
 
+If this tool was helping you, consider buying me a beer, or a beer factory, I am not your supervisor!
 
+XCH:xch1ac74hll6w0ldmrpx3eldhxdck6e4hfyhdw5z8dt8seanfldyj0sqfna064
 
