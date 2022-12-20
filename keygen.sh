@@ -37,8 +37,6 @@ SUB7='777777'
 SUB8='888888'
 SUB9='999999'
 SUBZERO='000000'
-SUB1976='1976'
-SUBGEB='18031984'
 SUBMORPH='morph'
 #result="123400004321"
 address=$(chia keys show | grep "$result" -A 4 | grep "First" | cut -d " " -f 4)
@@ -76,12 +74,6 @@ case $result in
     echo -n -e "FOUND: Fingerprint with special pattern: $result \n" ; i++ ; savekey
     ;;
   *"$SUBZERO"*)
-    echo -n -e "FOUND: Fingerprint with special pattern: $result \n" ; i++ ; savekey
-    ;;
-  *"$SUB1976"*)
-    echo -n -e "FOUND: Fingerprint with special pattern: $result \n" ; i++ ; savekey
-    ;;
-  *"$SUBGEB"*)
     echo -n -e "FOUND: Fingerprint with special pattern: $result \n" ; i++ ; savekey
     ;;
 esac
